@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Berita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="my-custom-body">
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <button class="Logol" height="100px" alt="profile" data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;"><img src="no-profile-picture-icon.webp" alt=""></button>
+            </div>
+            <div class="header-mid">
+                <h1>Break The Limit</h1>
+            </div>
+            <div class="header-right">
+                <input type="text" class="search-bar" placeholder="Search...">
+                <button class="search-button">Search</button>    
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-header Section -->
+    <div class="nav">
+        <nav>
+            <button type="button" class="btn btn-link">Terkini</button>
+            <button type="button" class="btn btn-link">Populer</button>
+            <button type="button" class="btn btn-link">Nasional</button>
+            <button type="button" class="btn btn-link">Internasional</button>
+            <button type="button" class="btn btn-link">Keuangan</button>
+            <button type="button" class="btn btn-link">Pemerintahan</button>
+            <button type="button" class="btn btn-link">Olahraga</button>
+            <button type="button" class="btn btn-link">Kesehatan</button>
+            <button type="button" class="btn btn-link">Kecantikan</button>
+            <button type="button" class="btn btn-link">Saham</button>
+            <button type="button" class="btn btn-link">Edukasi</button>
+        </nav>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="together.png" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="Before-doom.png" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="makhluk-gaib.png" alt="Slide 3">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <!-- Main Content Section -->
+    <div class="container">
+        <!-- News Items -->
+        <div class="news-item">
+            <h2>Judul Berita Pertama</h2>
+            <p>Teks berita pertama...</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="news-item">
+            <h2>Judul Berita Kedua</h2>
+            <p>Teks berita kedua...</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+        <div class="news-item">
+            <h2>Judul Berita Ketiga</h2>
+            <p>Teks berita ketiga...</p>
+            <a href="#">Baca Selengkapnya</a>
+        </div>
+    </div>
+    
+    <!-- Table -->
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Portal Berita. All rights reserved.</p>
+    </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="col-form-label text-dark">Username:</label>
+                        <input type="text" class="form-control text-dark" id="username">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="col-form-label text-dark">Password:</label>
+                        <input type="password" class="form-control text-dark" id="password">
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-dark">Doesn't have an account? <a href="register.html" class="text-primary">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Bootstrap JS and its dependencies (Popper.js and Bootstrap's JavaScript) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideWidth = document.querySelector('.slide').clientWidth;
+        let slideIndex = 0;
+
+        function nextSlide() {
+            if (slideIndex === slides.children.length - 1) {
+                slideIndex = 0;
+            } else {
+                slideIndex++;
+            }
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+        }
+
+        setInterval(nextSlide, 3000);
+
+        function plusSlides(n) {
+            slideIndex = slideIndex + n;
+            if (slideIndex < 0) {
+                slideIndex = slides.children.length - 1;
+            } else if (slideIndex === slides.children.length) {
+                slideIndex = 0;
+            }
+            updateSlidePosition();
+        }
+    </script>
+</body>
+</html>
